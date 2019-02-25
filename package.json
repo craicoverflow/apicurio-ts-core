@@ -1,0 +1,45 @@
+{
+  "name": "apicurio-ts-core",
+  "version": "0.1.1",
+  "description": "A library containing some common classes used by various other Apicurio projects.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Apicurio/apicurio-ts-core"
+  },
+  "main": "bundles/apicurio-ts-core.umd.js",
+  "module": "index.js",
+  "typings": "index.d.ts",
+  "typescript": {
+    "definition": "index.d.ts"
+  },
+  "scripts": {
+    "test": "karma start karma-headless.js",
+    "dev": "karma start karma-chrome.js",
+    "clean": "rimraf dist",
+    "compile": "tsc -p ./tsconfig-package.json",
+    "rollup": "mkdirp ./dist/bundles && rollup -c rollup.config.js",
+    "lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
+    "package": "rimraf dist && tsc -p tsconfig-package.json && cpx package.json dist && cpx module/*.* dist && mkdirp ./dist/bundles && rollup -c rollup.config.js"
+  },
+  "dependencies": {
+    "core-js": "2.6.5"
+  },
+  "devDependencies": {
+    "@types/jasmine": "3.3.9",
+    "cpx": "1.5.0",
+    "mkdirp": "0.5.1",
+    "rimraf": "2.6.3",
+    "jasmine-core": "3.3.0",
+    "karma": "4.0.0",
+    "karma-chrome-launcher": "2.2.0",
+    "karma-cli": "2.0.0",
+    "karma-jasmine": "2.0.1",
+    "karma-phantomjs-launcher": "1.0.4",
+    "karma-summary-reporter": "1.6.0",
+    "karma-typescript": "4.0.0",
+    "rollup": "0.68.2",
+    "rollup-plugin-commonjs": "8.4.1",
+    "typescript": "3.3.3"
+  }
+}

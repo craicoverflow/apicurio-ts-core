@@ -1,0 +1,10 @@
+coverage
+node_modules
+*.js
+*.js.map
+.idea
+.settings
+.project
+.classpath
+npm-debug.log
+dist
