@@ -18,11 +18,16 @@
 export class StringUtils {
 
     public static isJSON(value: string): boolean {
-        return value !== null && value !== undefined && typeof value === "string" && (value.startsWith("{") || value.startsWith("["));
+        return value !== null && value !== undefined && typeof value === "string" &&
+            (StringUtils.startsWith(value, "{") || StringUtils.startsWith(value, "["));
     }
 
     public static isXml(value: string): boolean {
-        return value !== null && value !== undefined && typeof value === "string" && value.startsWith("<");
+        return value !== null && value !== undefined && typeof value === "string" && StringUtils.startsWith(value, "<");
+    }
+
+    public static startsWith(value: string, swith: string): boolean {
+        return value !== null && value !== undefined && value.indexOf(swith) === 0;
     }
 
 }
