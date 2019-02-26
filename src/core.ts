@@ -15,6 +15,8 @@
  * limitations under the License.
  */
 
+export * from "./messaging/debouncer";
+export * from "./messaging/queue";
 export * from "./messaging/topic";
 
 export * from "./utils/array";
