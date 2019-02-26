@@ -20,7 +20,7 @@
 import {StringUtils} from "../../src/utils/string";
 
 
-describe("Utils - StringUtils Test", () => {
+describe("Utils - StringUtils", () => {
 
     beforeEach(() => {});
 

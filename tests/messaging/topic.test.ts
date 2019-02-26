@@ -20,18 +20,18 @@
 import {Topic, TopicSubscription} from "../../src/messaging/topic";
 
 
-describe("Messaging - Topic Test", () => {
+describe("Messaging - Topic", () => {
 
     beforeEach(() => {});
 
-    it("Get Value", () => {
+    it("getValue", () => {
         let topic: Topic<string> = new Topic<string>();
         expect(topic.getValue()).toBeUndefined();
         topic.send("foo");
         expect(topic.getValue()).toEqual("foo");
     });
 
-    it("Subscribe", () => {
+    it("subscribe", () => {
         let topic: Topic<string> = new Topic<string>();
         let theValue: string = undefined;
         topic.subscribe( value => {
@@ -43,7 +43,7 @@ describe("Messaging - Topic Test", () => {
         expect(theValue).toEqual("foo");
     });
 
-    it("Unsubscribe", () => {
+    it("unsubscribe", () => {
         let topic: Topic<string> = new Topic<string>();
         let theValue: string = undefined;
         let subscription:TopicSubscription<string> = topic.subscribe( value => {

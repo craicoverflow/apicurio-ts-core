@@ -20,7 +20,7 @@
 import {ArrayUtils} from "../../src/utils/array";
 
 
-describe("Utils - ArrayUtils Test", () => {
+describe("Utils - ArrayUtils", () => {
 
     beforeEach(() => {});
 

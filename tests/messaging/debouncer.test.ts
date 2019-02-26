@@ -20,18 +20,18 @@
 import {Debouncer} from "../../src/messaging/debouncer";
 
 
-describe("Messaging - Debouncer Test", () => {
+describe("Messaging - Debouncer", () => {
 
     beforeEach(() => {});
 
-    it("Get Value", () => {
+    it("getValue", () => {
         let debouncer: Debouncer<string> = new Debouncer<string>({}, () => {});
         expect(debouncer.getValue()).toBeUndefined();
         debouncer.emit("foo");
         expect(debouncer.getValue()).toEqual("foo");
     });
 
-    it("Debounce", async () => {
+    it("debounce", async () => {
         let promise: Promise<any> = new Promise(resolve => {
             let numCallbacks: number = 0;
             let debouncer: Debouncer<string> = new Debouncer<string>({ period: 100 }, value => {

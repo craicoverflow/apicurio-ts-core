@@ -20,7 +20,7 @@
 import {ObjectUtils} from "../../src/utils/object";
 
 
-describe("Utils - ObjectUtils Test", () => {
+describe("Utils - ObjectUtils", () => {
 
     beforeEach(() => {});
 
