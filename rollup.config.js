@@ -1,9 +1,9 @@
 
 export default {
     entry: 'dist/index.js',
-    dest: 'dist/bundles/OAI.umd.js',
+    dest: 'dist/bundles/apicurio-ts-core.umd.js',
     format: 'umd',
-    moduleName: 'OAI',
+    moduleName: 'apicurio-ts-core',
     globals: {
     }
 };
