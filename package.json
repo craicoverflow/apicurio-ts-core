@@ -35,7 +35,7 @@
     "karma": "5.1.1",
     "karma-chrome-launcher": "3.1.0",
     "karma-cli": "2.0.0",
-    "karma-jasmine": "4.0.0",
+    "karma-jasmine": "4.0.1",
     "karma-phantomjs-launcher": "1.0.4",
     "karma-summary-reporter": "1.8.0",
     "karma-typescript": "5.0.3",
